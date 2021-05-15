@@ -71,4 +71,4 @@ func main() {
 
 ## License
 
-This project is licensed under the MIT license. See the [LICENSE.md](LICENSE.md) file for details
+This project is licensed under the MIT license - Copyright (c) 2021 Kaj Jagtenberg. See the [LICENSE.md](LICENSE.md) file for details
