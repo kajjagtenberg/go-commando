@@ -53,7 +53,7 @@ func main() {
 	}
 
 	cmd := commando.Command{
-		Name: "add",
+		Name: "add", // "a" would be sufficient too, since it's the shorthand version for the same command
 		Args: args,
 	}
 
