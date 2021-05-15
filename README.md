@@ -2,6 +2,8 @@
 
 Simple package for command handling pipeline in Go.
 
+This code was lifted verbatim from my project [EventflowDB](https://github.com/kajjagtenberg/eventflowdb) since I found it a clean way to integrate a command pipeline into an application without introducing direct coupling with the transport protocol. This allows you to write commands once, and a port for different transports once. Then changes to commands need to only be made in a single place.
+
 ## Installation
 
 ```shell
