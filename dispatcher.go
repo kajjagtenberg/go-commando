@@ -1,5 +1,7 @@
 package commando
 
+import "fmt"
+
 type CommandDispatcher struct {
 	handlers map[string]CommandHandler
 }
@@ -22,7 +24,7 @@ func (r *CommandDispatcher) Register(name string, shorthand string, handler Comm
 func (r *CommandDispatcher) Handle(cmd Command) (interface{}, error) {
 	handler := r.handlers[cmd.Name]
 	if handler == nil {
-		return nil, ErrUnknownCommand
+		return nil, fmt.Errorf("%w: %s", ErrUnknownCommand, cmd.Name)
 	}
 
 	return handler(cmd)
